@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background: #e0e5ec;
+  }
+  
+  .accordion {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    width: 80%;
+  }
+  
+  .accordion-item {
+    background: #e0e5ec;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+  }
+  
+  .accordion-head {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: #e0e5ec;
+    border-radius: 15px 15px 0 0;
+    transition: box-shadow 0.3s;
+  }
+  
+  .accordion-head:hover {
+    box-shadow: inset 3px 3px 8px #a3b1c6, inset -3px -3px 8px #ffffff;
+  }
+  
+  .fa-arrow-down {
+    margin-left: auto;
+    transition: transform 0.3s;
+  }
+  
+  .accordion-text {
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5;
+    transition: max-height 0.3s;
+    background: #e0e5ec;
+  }
+  
+  .accordion-text p {
+    margin: 0;
+    padding: 16px;
+  }
+  
+  .accordion-text.active {
+    max-height: 200px;
+    transition: max-height 1.2s;
+  }
+  
+  .accordion-item:has(.accordion-text.active) .fa-arrow-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+  
+  .delete-btn {
+    background: #e0e5ec;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s, box-shadow 0.3s;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+  }
+  
+  .delete-btn:hover {
+    color: red;
+    box-shadow: inset 3px 3px 6px #a3b1c6, inset -3px -3px 6px #ffffff;
+  }
+  
+  #addSection {
+    margin-top: 20px;
+    background: #e0e5ec;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+    transition: box-shadow 0.3s;
+  }
+  
+  #addSection:hover {
+    box-shadow: inset 3px 3px 6px #a3b1c6, inset -3px -3px 6px #ffffff;
+  }
+  
